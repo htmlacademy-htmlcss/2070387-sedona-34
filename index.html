@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/styles/styles.css">
   </head>
   <body>
 <header class="page-header">
@@ -43,49 +44,74 @@
 </header>
 
 <main class="main-index">
-  <h1 class="visually-hidden">Добро пожаловать в Седону, штат Аризона</h1>
-  <img class="logo" src="/images/main/welcome.png" width="458" height="352" alt="Добро пожаловать в туристический город Седона">
-  <p class="tagline">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+  <section class="wellcome-container">
+    <h1 class="visually-hidden">Добро пожаловать в Седону, штат Аризона</h1>
+    <img class="logo" src="/images/main/welcome.png" width="458" height="352" alt="Добро пожаловать в туристический город Седона">
+  </section>
 
   <section class="advantages">
     <h2 class="visually-hidden">Преимущества</h2>
-    <p class="advantages-caption">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+    <div class="advantages-title">
+      <p class="tagline">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+      <p class="advantages-caption">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+    </div>
+
     <ol class="advantages-list">
-      <li class="advantages-item">
-        <h3 class="advantages-head">Настоящий городок</h3>
-        <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-        <img class="sedona-city-img" src="/images/main/true-city.jpg" width="800" height="384" alt="Улица в городе Седона">
-        <ul class="city-list">
-          <li class="city-item">
-            <h3 class="advantages-head city">Жильё</h3>
-            <p class="advantages-description city">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-          </li>
-          <li class="city-item">
-            <h3 class="advantages-head city">Еда</h3>
-            <p class="advantages-description city">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
-          </li>
-          <li class="city-item">
-            <h3 class="advantages-head city">Сувениры</h3>
-            <p class="advantages-description city">Не только китайского, но и настоящего местного производства!</p>
-          </li>
-        </ul>
+
+      <li class="advantages-item advantages-item-1">
+        <div class="real-city">
+          <h3 class="advantages-head">Настоящий городок</h3>
+          <p class="1">— №1 —</p>
+          <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
+          <img class="sedona-city-img" src="/images/main/true-city.jpg" width="800" height="384" alt="Улица в городе Седона">
+
+
+        <div class="city-item-gray">
+          <img class="house" src="/images/main/house.png"  width="75" height="72" alt="Дом">
+          <h4 class="advantages-benefits">Жильё</h4>
+          <p class="advantages-benefits-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+        </div>
+
+        <div class="city-item">
+          <img class="house" src="/images/main/burger.png"  width="75" height="72" alt="Бургер">
+          <h4 class="advantages-benefits">Еда</h4>
+          <p class="advantages-benefits-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+        </div>
+
+        <div class="city-item-gray">
+          <img class="house" src="/images/main/souvenir.png"  width="75" height="72" alt="Сувенир">
+          <h4 class="advantages-benefits">Сувениры</h4>
+          <p class="advantages-benefits-description">Не только китайского, но и настоящего местного производства!</p>
+        </div>
       </li>
-      <li class="advantages-item">
-        <h3 class="advantages-head">Там есть мост дьявола</h3>
-        <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+
+      <li class="advantages-item advantages-item-2">
+        <div class="devil-bridge">
+          <h3 class="advantages-head">Там есть мост дьявола</h3>
+          <p class="2">— №2 —</p>
+          <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+        </div>
         <img class="sedona-canyon-img" src="/images/main/devil-bridge.jpg" width="800" height="384" alt="Каньон в городе Седона">
+
       </li>
-      <li class="advantages-item">
-        <h3 class="advantages-head">Небольшая площадь</h3>
-        <p class="advantages-description">Все достопримечательности находятся очень близко</p>
+
+      <li class="advantages-item advantages-item-3 city-item-gray">
+        <h3 class="advantages-benefits">Небольшая площадь</h3>
+        <p class="3 advantages-benefits-description">— №3 —</p>
+        <p class="advantages-description advantages-benefits-description">Все достопримечательности находятся очень близко</p>
       </li>
-      <li class="advantages-item">
-        <h3 class="advantages-head">Красивая дорога</h3>
-        <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+
+      <li class="advantages-item advantages-item-4 city-item-darkgray">
+        <h3 class="advantages-benefits">Красивая дорога</h3>
+        <p class="4 advantages-benefits-description">— №4 —</p>
+        <p class="advantages-description advantages-benefits-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </li>
-      <li class="advantages-item">
+
+      <li class="advantages-item advantages-item-5 city-item-gray">
         <h3 class="advantages-head">Мало туристов</h3>
-        <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
+        <p class="5 advantages-benefits-description">— №5 —</p>
+        <p class="advantages-description advantages-benefits-description">Большинство едет в Гранд Каньон и толпится там</p>
       </li>
     </ol>
   </section>
@@ -139,7 +165,9 @@
 
   <section class="developer">
     <h2 class="visually-hidden">Разработчки сайта</h2>
-    <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
+    <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+      <img class="htmlacademy" src="/images/footer/html_academy.png" alt="HTML Academy">
+    </a>
   </section>
 </footer>
   </body>

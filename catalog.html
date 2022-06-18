@@ -4,45 +4,44 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/styles/styles.css">
   </head>
   <body>
-<header class="page-header">
-  <nav class="navigation">
-    <a class="" href="/index.html">
-      <img class="navigation-logo" src="/images/header/logo.png" width="139" height="70" alt="Логотип «Седона»">
-    </a>
-    <ul class="navigation-list">
-      <li class="navigation-item">
-        <a class="navigation-link" href="#">Главная</a>
-      </li>
-      <li class="navigation-item">
-        <a class="navigation-link" href="about.sedona.html">О Седоне</a>
-      </li>
-      <li class="navigation-item">
-        <a class="navigation-link" href="hotels.html">Гостиницы</a>
-      </li>
-    </ul>
-    <ul class="navigation-list navigation-user">
-      <li class="navigation-item">
-        <a class="navigation-link" href="#">
-          <span class="visually-hidden">
-            Поиск
-          </span>
-        </a>
-      </li>
-      <li class="navigation-item">
-        <a class="navigation-link" href="#">
-          <span class="visually-hidden">
-            Избранное
-          </span>
-        </a>
-      </li>
-      <li class="navigation-item">
-        <button class="button navigation-button" type="submit">Хочу сюда!</button>
-      </li>
-    </ul>
-  </nav>
-</header>
+    <header class="page-header">
+      <nav class="navigation">
+        <img class="page-header-logo"  src="/images/header/logo.png" width="139" height="70" alt="Логотип «Седона»">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="about.sedona.html">О Седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="hotels.html">Гостиницы</a>
+          </li>
+        </ul>
+        <ul class="navigation-list navigation-user">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">
+                Поиск
+              </span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">
+                Избранное
+              </span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <button class="button navigation-button" type="submit">Хочу сюда!</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
 <main class="">
   <header class="inner-header">
@@ -80,7 +79,7 @@
         </fieldset>
 
         <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-title">Каталог Жилья:</legend>
+          <legend class="catalog-filter-title">Тип Жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="control">
@@ -133,8 +132,8 @@
         </a>
         <p class="hotel-type">Гостиница</p>
         <p class="hotel-card-price">От 4000 ₽</p>
-        <a class="hotel-card-more-button button" href="#">Подробнее</a>
-        <a class="hotel-card-favorites-button button" href="#">В избранное</a>
+        <a class="hotel-card-more-link button" href="#">Подробнее</a>
+        <button class="hotel-card-favorites-button button" type="submit">В избранное</button>
         <img class="stars" src="#" alt="Четыре звезды">
         <p class="rating">Рейтинг: 8,5</p>
       </li>
@@ -146,8 +145,8 @@
         </a>
         <p class="hotel-type">Гостиница</p>
         <p class="hotel-card-price">От 5000 ₽</p>
-        <a class="hotel-card-more-button button" href="#">Подробнее</a>
-        <a class="hotel-card-favorites-button button" href="#">В избранное</a>
+        <a class="hotel-card-more-link button" href="#">Подробнее</a>
+        <button class="hotel-card-favorites-button button" type="submit">В избранном</button>
         <img class="stars" src="#" alt="Четыре звезды">
         <p class="rating">Рейтинг: 9,2</p>
       </li>
@@ -159,8 +158,8 @@
         </a>
         <p class="hotel-type">Гостиница</p>
         <p class="hotel-card-price">От 2500 ₽</p>
-        <a class="hotel-card-more-button button" href="#">Подробнее</a>
-        <a class="hotel-card-favorites-button button" href="#">В избранное</a>
+        <a class="hotel-card-more-link button" href="#">Подробнее</a>
+        <button class="hotel-card-favorites-button button" type="submit">В избранное</button>
         <img class="stars" src="#" alt="Три звезды">
         <p class="rating">Рейтинг: 6,9</p>
       </li>
@@ -172,8 +171,8 @@
         </a>
         <p class="hotel-type">Гостиница</p>
         <p class="hotel-card-price">От 1500 ₽</p>
-        <a class="hotel-card-more-button button" href="#">Подробнее</a>
-        <a class="hotel-card-favorites-button button" href="#">В избранное</a>
+        <a class="hotel-card-more-link button" href="#">Подробнее</a>
+        <button class="hotel-card-favorites-button button" type="submit">В избранное</button>
         <img class="stars" src="#" alt="Две звезды">
         <p class="rating">Рейтинг: 5,0</p>
       </li>
@@ -256,7 +255,9 @@
 
   <section class="developer">
     <h2 class="visually-hidden">Разработчки сайта</h2>
-    <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
+    <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+      <img class="htmlacademy" src="/images/footer/html_academy.png" alt="HTML Academy">
+    </a>
   </section>
 </footer>
   </body>

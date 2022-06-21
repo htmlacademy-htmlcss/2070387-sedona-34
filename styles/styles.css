@@ -3,7 +3,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/ptsans-400.woff2) format("woff2");
+  src: url(../fonts/ptsans-400.woff2) format("woff2");
   font-display: swap;
   }
 
@@ -11,7 +11,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url(/fonts/ptsans-700.woff2) format("woff2");
+  src: url(../fonts/ptsans-700.woff2) format("woff2");
   font-display: swap;
   }
 
@@ -45,6 +45,14 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  }
+
+  .comtainer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   .main-container {
@@ -120,7 +128,7 @@ body {
 }
 
 .wellcome-container {
-  background-image: url("/images/main/index-background.jpg");
+  background-image: url("../images/main/index-background.jpg");
   background-color: #82B3D3;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -249,7 +257,7 @@ margin-bottom: 93px;
 }
 
 .newsletter {
-  background-image: url("/images/main/newsletter-background.jpg");
+  background-image: url("../images/main/newsletter-background.jpg");
   background-color: #82B3D3;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -284,7 +292,7 @@ margin-bottom: 93px;
 
 
 .inner-header {
-  background-image: url("/images/catalog/catalog-background.jpg");
+  background-image: url("../images/catalog/catalog-background.jpg");
   background-color: #82B3D3;
   background-size: 100% auto;
   background-repeat: no-repeat;

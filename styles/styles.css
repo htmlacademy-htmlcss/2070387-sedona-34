@@ -54,6 +54,7 @@ body {
   flex-direction: column;
   flex-grow: 1;
   background-color: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -513,7 +514,6 @@ padding: 0;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
-  text-transform: uppercase;
   text-align: left;
   padding: 0;
   margin: 0;
@@ -653,8 +653,11 @@ opacity: 0.3;
   text-align: left;
 }
 
+.select-control-price {
+  min-width: 290px;
+}
+
 .select-control {
-  min-width: 160px;
   margin-left: 51px;
 }
 
@@ -825,6 +828,10 @@ margin: auto;
   text-align: left;
 }
 
+.card-amount-title {
+  margin-right: 51px;
+}
+
 .newsletter-inner {
   text-align: center;
 }
@@ -983,6 +990,79 @@ margin: auto;
   margin: 0;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+}
+
+.control::before {
+  content: "";
+  position: absolute;
+  background-image: url("..//images/catalog/checked.svg");
+}
+
+.control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control:active .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:focus + .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  width: 13px;
+  height: 10px;
+  top: 5px;
+  left: 4px;
+  background-image: url("..//images/catalog/checked.svg");
+  content: "";
+}
+
+.control-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-circle::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  background: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
+
+.control-input:focus + .control-circle {
+  outline: 3px solid #83B3D3;
+  border-radius: 50%;
+}
+
 .catalog-filter-item {
   padding: 0;
   margin: 0;
@@ -1037,6 +1117,7 @@ fieldset {
 .price-filter-1 {
   grid-area: f1;
   align-self: center;
+  position: relative;
 }
 
 .price-filter-2  {
@@ -1069,8 +1150,26 @@ fieldset {
   border-right: 1px;
 }
 
+.price-filter-1::before {
+  content: "от";
+  position: absolute;
+  color: #FFFFFF;
+  opacity: 0.3;
+  top: 14px;
+  left: 112px;
+}
+
 .range-input-until {
   border-radius: 0 4px 4px  0;
+}
+
+.price-filter-1::after {
+  content: "до";
+  position: absolute;
+  color: #FFFFFF;
+  opacity: 0.3;
+  top: 14px;
+  left: 254px;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1144,11 +1243,16 @@ fieldset {
 }
 
 .select-control-price {
-  width: 290px;
-  height: 49px;
-  margin: o;
-  padding: 0;
-  margin-right: 78px;
+  margin: 0;
+  padding: 14px 96px 14px 20px;
+  margin-right: 58px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.select-control {
+  margin: 0;
+  padding: 14px 96px 14px 20px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
@@ -1165,10 +1269,17 @@ fieldset {
   border-color: #3F5E72
 }
 
-.price-option {
-
+.select-control:hover {
+  border-color: #9747FF;
 }
 
+.select-control:focus {
+  border-color: #9747FF;
+}
+
+.select-control:active {
+  border-color: #3F5E72
+}
 
 .hotel-cards-list {
   display: grid;
@@ -1281,9 +1392,7 @@ fieldset {
   min-width: 400px;
 }
 
-.card-amoun {
-  width: 386px;
-  height: 49px;
+.card-amount {
   margin: 0;
   padding: 0;
 }
@@ -1311,3 +1420,269 @@ fieldset {
   border-bottom: 2px solid #756257;
   transform: translateX(-93px) translateY(45px);
 }
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 4;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 62px 70px 70px 70px;
+  background: #FFFFFF;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-auth {
+  width: 575px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 54px;
+  height: 54px;
+  background: #F2F2F2;
+  top: 54px;
+  right: 70px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background: #E6E6E6;
+}
+
+.modal-close-button:focus {
+background: #E6E6E6;
+outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  background: #E6E6E6;
+  outline: none;
+  }
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 63px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.field-group-date {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.field-group {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.modal-field-label {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.spoiler {
+margin: 0;
+margin-left: 155px;
+padding: 0;
+margin-bottom: 11px;
+font-size: 16px;
+line-height: 21px;
+color: #333333;
+}
+
+.spoiler-error {
+  margin: 0;
+  margin-left: 155px;
+  padding: 0;
+  margin-bottom: 11px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FF5757;
+}
+
+.modal-find-button {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 12px 26px;
+  width: 575px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  background: #83B3D3;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-find-button:hover {
+  background: #68A2CA;
+}
+
+.modal-find-button:focus {
+  background: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.modal-find-button:active {
+  background: #68A2CA;
+  opacity: 0.3;
+}
+.date-field {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  min-width: 400px;
+  height: 50px;
+  background: #F2F2F2;
+  border: 0;
+  border-radius: 4px;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.persons-number {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+
+.field-group-date::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  right: 17px;
+  background-image: url("..//images/modal/date.svg");
+}
+
+.persons-number {
+  margin: 0;
+  margin-right: 56px;
+  padding: 0;
+  width: 133px;
+  height: 50px;
+  background: #F2F2F2;
+  border: 0;
+  border-radius: 4px;
+}
+
+.numbers {
+  margin-bottom: 40px;
+}
+
+.adults {
+  margin-right: 64px;
+}
+
+.children  {
+  margin-right: 4px;
+}
+
+.tooltip-toggle {
+  position: relative;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+  margin-right: 18px;
+  width: 25px;
+  height: 25px;
+  background: #83B3D3;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  background-color: #242424;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  text-transform: none;
+  padding: 5px 8px;
+  border-radius: 8px;
+  display: block;
+  width: 160px;
+}
+
+.tooltip-text {
+  position: absolute;
+  padding: 16px 20px;
+  width: 216px;
+  right: 40px;
+  top: 55px;
+  background: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  display: none;
+}
+
+.tooltip-text::before {
+  content:'';
+  background-image: url("..//images/modal/tooltip-arrow.svg");
+  width: 20px;
+  height: 10px;
+  position:absolute;
+  top: -9px;
+  left: 0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+/* .modal-container {
+  display: none;
+} */

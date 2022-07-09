@@ -36,6 +36,7 @@ html {
 }
 
 body {
+  min-width: 1200px;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -505,7 +506,7 @@ padding: 0;
 }
 
 .inner-header-container {
-  width: 1060;
+  width: 1060px;
   padding: 0;
 }
 
@@ -793,7 +794,6 @@ margin: auto;
   text-align: center;
   text-decoration: none;
   background-color: #82B3D3;
-  padding: auto;
   border-radius: 4px;
   margin: 0;
   padding: 12px 0;
@@ -1237,7 +1237,6 @@ fieldset {
 
 .search-results {
   display: flex;
-  margin: o auto;
   align-items: center;
   margin-bottom: 56px;
 }

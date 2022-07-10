@@ -147,12 +147,14 @@ body {
 
 .real-city-items {
   display: flex;
+  align-items: center;
   min-height: 384px;
 }
 
 .real-city-container,
 .devil-bridge-container {
   display: flex;
+  align-items: center;
 }
 
 .advantages-item {
@@ -176,6 +178,9 @@ body {
 padding: 0;
 }
 
+.button {
+  cursor: pointer;
+}
 
 .navigation-button {
   font-family: "PT Sans", sans-serif;
@@ -249,7 +254,6 @@ padding: 0;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  width: 654px;
   margin: 0 auto;
   margin-bottom: 90px;
 }
@@ -266,16 +270,11 @@ padding: 0;
   background-color: #82B3D3;
   color: #FFFFFF;
   width: 400px;
-}
-
-.devil-bridge,
-.real-city {
   padding: 0;
   margin: 0;
   padding-top: 92px;
+  min-height: 292px;
 }
-
-
 
 .real-city .advantages-head,
 .devil-bridge .advantages-head {
@@ -323,6 +322,7 @@ padding: 0;
 
 .real-city-benefits {
   padding-top: 182px;
+  min-height: 202px;
 }
 
 .house::before {
@@ -778,8 +778,9 @@ margin: auto;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 9px;
+  padding-top: 8px;
   padding-bottom: 8px;
+  margin: 0;
 }
 
 .pagination-link {

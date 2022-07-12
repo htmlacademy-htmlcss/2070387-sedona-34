@@ -103,10 +103,18 @@ body {
   max-width: 270px;
   margin-left: auto;
   margin-right: 70px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .navigation-link-favorite {
-  position: relative;
+  left: 14px;
+  top:1px;
+}
+
+.navigation-link-search {
+  left: 18px;
+  top:2px;
 }
 
 .navigation-link-favorite::after {
@@ -122,7 +130,8 @@ body {
   border-radius: 10px;
   width: 20px;
   height: 20px;
-  top: 35%;
+  top: 12px;
+  left: 20px;
   transform: translate(-40%, -90%);
 }
 
@@ -176,6 +185,7 @@ body {
 
 .navigation-link-search, .navigation-link-favorite {
 padding: 0;
+position: relative;
 }
 
 .button {
@@ -400,6 +410,7 @@ padding: 0;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: -1.6px;
 }
 
 .hotel-search-button {
@@ -458,6 +469,7 @@ padding: 0;
   margin: 0;
   padding-left: 22px;
   border: none;
+  font: inherit;
 }
 
 .newsletter-button {
@@ -498,10 +510,11 @@ padding: 0;
   background-color: #82B3D3;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-position: center;
   width: 1060px;
   min-height: 298px;
   margin: 0;
-  margin-bottom: 62px;
+  margin-bottom: 54px;
   padding: 35px 70px 70px 70px;
 }
 
@@ -602,6 +615,7 @@ fill: #FFFFFF;
   background-color: #82B3D3;
   border-radius: 4px;
   padding: 0;
+  letter-spacing: -1px;
 }
 
 .button-reset {
@@ -618,6 +632,7 @@ fill: #FFFFFF;
   width: 100px;
   height: 32px;
   align-self: center;
+  letter-spacing: -1px;
 }
 
 .button-reset:hover {
@@ -639,11 +654,10 @@ opacity: 0.3;
   font-weight: 700;
   text-align: left;
   text-transform: uppercase;
-  width: 500px;
   height: 37px;
   padding: 0;
   margin: 0;
-  margin-right: 191px;
+  margin-right: 180px;
 }
 
 .select-control,
@@ -671,8 +685,8 @@ opacity: 0.3;
 
 .button-visual-link {
   position: relative;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   margin-right: 8px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -727,8 +741,7 @@ margin: auto;
   margin: 0;
 }
 
-.hotel-card-more-link,
-.hotel-card-favorites-button {
+.hotel-card-more-link {
   color: #FFFFFF;
   font-size: 16px;
   line-height: 20px;
@@ -737,6 +750,21 @@ margin: auto;
   text-decoration: none;
   text-transform: uppercase;
   padding: 9px 15px 8px;
+}
+
+.hotel-card-favorites-button {
+  color: #FFFFFF;
+  font-size: 16px;
+  letter-spacing: -1px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px 15px 8px;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  border: 0;
 }
 
 .hotel-card-more-link {
@@ -756,12 +784,6 @@ margin: auto;
 .hotel-card-more-link:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
-}
-
-.hotel-card-favorites-button {
-  background-color: #82B3D3;
-  border-radius: 4px;
-  border: 0;
 }
 
 .added {
@@ -1140,7 +1162,7 @@ fieldset {
   font: inherit;
   color: #FFFFFF;
   width: 122px;
-  min-height: 48px;
+  min-height: 44px;
   border: 2px solid #FFFFFF;
   background-color: transparent;
   appearance: textfield;
@@ -1226,7 +1248,7 @@ fieldset {
 
 .toggle-max {
   top: -8px;
-  right: 0px;
+  right: -6px;
 }
 
 
@@ -1240,11 +1262,12 @@ fieldset {
   display: flex;
   align-items: center;
   margin-bottom: 56px;
+  justify-content: space-between;
 }
 
 .select-control-price {
   margin: 0;
-  padding: 14px 96px 14px 20px;
+  padding: 10px 96px 10px 20px;
   margin-right: 58px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1252,7 +1275,7 @@ fieldset {
 
 .select-control {
   margin: 0;
-  padding: 14px 96px 14px 20px;
+  padding: 10px 96px 10px 20px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
@@ -1313,17 +1336,18 @@ fieldset {
 }
 
 .hotel-card-link-title {
+  grid-column: 1 / -1;
+  text-decoration: none;
+}
+
+.hotel-card-title {
+  margin: inherit;
   color: #000;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-align: left;
-  text-decoration: none;
-  grid-column: 1 / -1;
-}
 
-.hotel-card-title {
-  margin: inherit;
 }
 
 .hotel-card-image {
@@ -1436,6 +1460,7 @@ fieldset {
 
 .modal {
   position: relative;
+  top: 206px;
   margin: auto;
   padding: 62px 70px 70px 70px;
   background: #FFFFFF;
